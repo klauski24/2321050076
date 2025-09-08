@@ -2,11 +2,15 @@ body{
     margin: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 nav {
     background-color: #0c4ca3;
 }
 
-ul {
+.ul1 {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -38,4 +42,100 @@ li {
 
 header {
     border-bottom: 15px solid #f1f1f2;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tintuc{
+  border-bottom: 3px solid #f1f1f2;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.baibao-tintuc {
+  display: flex;
+  gap: 20px;
+}
+
+
+.baibao-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.baibao-content {
+    flex: 1;
+    font-family: Arial, sans-serif;
+}
+
+.baibao-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.baibao-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.baibao-content li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.anh-qc1{
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.anh-qc2{
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.xemthem {
+  font-size: 15px;
+  float: right;
+  text-decoration: none;
+  color: gray;
+}
+
+.main-content2 {
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+
+.nenxam{
+    background-color: gray;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nenden{
+    background-color: black;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.nenden1{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.nenden2{
+    width: 40%;
+    margin: 0 auto;
 }
