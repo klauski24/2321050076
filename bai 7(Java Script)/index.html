@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        // để viết chú thích hs dùng kí tự: //
+        document.writeln("Hẹ Hẹ Hẹ + <br>");
+
+        // dấu + dùng để nối chuỗi
+        // khai báo biến
+        let hoTen = "Nguyễn Văn A + <br>";
+        document.writeln(hoTen + "<br>");
+
+        // khai báo hằng số
+        const pi = 3.14;
+        document.writeln(pi + "<br>");
+
+        let soThuNhat = 10;
+        let soThuHai = 5;
+        let ketQua = 0;
+        ketQua = soThuNhat + soThuHai;
+        document.writeln("Kết quả: " + ketQua + "<br>");
+        // ++ để tăng giá trị của biến lên 1 đơn vị
+        // -- để giảm giá trị của biến đi 1 đơn vị
+        // % để lấy phần dư của phép chia
+
+        let soThu1 = 10;
+        let soThu2 = 5;
+        let ketQua1 = 0;
+        soThu1 += soThu2;
+        document.writeln("Kết quả: " + soThu1 + "<br>");
+        // += là phép toán rút gọn của: soThu1 = soThu1 + soThu2;
+        // -= là phép toán rút gọn của: soThu1 = soThu1 - soThu2;
+        // *= là phép toán rút gọn của: soThu1 = soThu1 * soThu2;
+        // /= là phép toán rút gọn của: soThu1 = soThu1 / soThu2;
+        // %= là phép toán rút gọn của: soThu1 = soThu1 % soThu2;
+
+        let soThuBa = 10;
+        let soThuBon = "5";
+        let ketQua2 = 0;
+        document.writeln(soThuBa==soThuBon + "<br>"); 
+        // == so sánh giá trị
+        // != so sánh giá trị không bằng
+        // > so sánh giá trị lớn hơn   
+        // < so sánh giá trị nhỏ hơn
+        // >= so sánh giá trị lớn hơn hoặc bằng
+        // <= so sánh giá trị nhỏ hơn hoặc bằng
+        // === so sánh giá trị và kiểu dữ liệu
+        // !== so sánh giá trị và kiểu dữ liệu không bằng
+        
+        let thonTinSinhVien = {
+            hoTen: "Nguyễn Văn A",
+            tuoi: 20,
+            diaChi: "Hà Nội",
+            gioiTinh: true,
+            lop: "Công nghệ phần mềm K68"
+        };
+        document.writeln("Xin chào bạn " + thonTinSinhVien.hoTen + " " + thonTinSinhVien.tuoi + " tuổi, lớp " + thonTinSinhVien.lop + " sống tại " + thonTinSinhVien.diaChi + "<br>");
+
+        let diaChiNhatAnh = {
+            thanhPho: "Hà Nội",
+            quan: "Cầu Giấy",
+            phuong: "Dịch Vọng Hậu",
+            soNha: "123",
+        };
+        thonTinSinhVien.diaChi = diaChiNhatAnh;
+        let namNay = 2025;
+
+        document.writeln("Xin chào bạn " + thonTinSinhVien.hoTen
+            + " sống tại " + thonTinSinhVien.diaChi.soNha 
+            + ", phường " + thonTinSinhVien.diaChi.phuong 
+            + ", quận " + thonTinSinhVien.diaChi.quan 
+            + ", thành phố " + thonTinSinhVien.diaChi.thanhPho 
+            + ". Bạn sinh năm " + (namNay - thonTinSinhVien.tuoi)
+            + ".<br>");
+
+        let soThuNam = "10";
+        soThuNam = parseInt(soThuNam);
+        document.writeln(typeof(soThuNam) + "<br>");
+        // parseint là hàm chuyển chuỗi sang số nguyên
+        // parsefloat là hàm chuyển chuỗi sang số thực
+        // toString() là hàm chuyển số sang chuỗi
+        // typeof là toán tử để kiểm tra kiểu dữ liệu của biến
+        // length là thuộc tính để kiểm tra độ dài của chuỗi
+
+    </script>
+</body>
+</html>
