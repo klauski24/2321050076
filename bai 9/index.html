@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ARRAY mảng
+            let arr = [1, 2, 3, 4, 'a', 'b', 'c', 2, 3];
+            let ten = 'ten';
+            let thonTin = {
+                ten: ten,
+            }
+            arr[3] = 6;
+            document.writeln(Array.isArray(arr)+"<br>");//kiểm tra có phải mảng không trả về true/false
+            document.writeln(arr.length+"<br>");//độ dài mảng
+            document.writeln(arr[2]+"<br>");//lấy phần tử trong mảng tính từ 0
+            document.writeln(arr.indexOf(3)+"<br>");//tìm vị trí của phần tử trong mảng, không tìm thấy trả về -1
+            document.writeln(arr.lastIndexOf(3)+"<br>");//tìm vị trí cuối cùng của phần tử trong mảng, không tìm thấy trả về -1
+            document.writeln(arr+""+"<br>");//chuyển mảng thành chuỗi
+
+            let a, b, c, d;
+            a=[1, 2, 3];
+            b="javascript";
+            c=[42,'JS'];
+            d=a.concat(b,c);//nối mảng
+            // document.writeln(d+"<br>");
+            // d=d.join("-");//nối mảng thành chuỗi dựa vào ký tự phân tách
+            d.pop();//xóa phần tử cuối mảng
+            document.writeln(d+"<br>");
+            d.push("html");//thêm phần tử vào cuối mảng
+            document.writeln(d+"<br>");
+            d.shift();//xóa phần tử đầu mảng
+            document.writeln(d+"<br>");
+            d.unshift("css");//thêm phần tử vào đầu mảng
+            document.writeln(d+"<br>");
+
+            let so = '1000000000000000000001';
+            let soCuoi = parseInt(so[so.length -1]);
+            if (soCuoi % 2 == 0) {
+                document.writeln(so+" là số chẵn<br>");
+            } else {
+                document.writeln(so+" là số lẻ<br>");
+            }
+
+            let now = new Date().getHours();
+            if (now > 5 && now < 10) {
+                document.writeln("Chào buổi sáng<br>");
+            } else if (now >= 10 && now < 13) {
+                document.writeln("Chào buổi trưa<br>");
+            } else if (now >= 13 && now < 17){
+                document.writeln("Chào buổi chiều<br>");
+            }
+            else if (now >= 17 && now < 22){
+                document.writeln("Chào buổi tối<br>");
+            }
+            else {
+                document.writeln("Chào bạn đã khuya rồi<br>");
+            }
+            
+
+            let diemA=10;
+            let diemB=5;
+            let diemC=8;
+            tongDiem=diemA*0.6+diemB*0.3+diemC*0.1;
+            if (tongDiem>=8 && tongDiem<=10) {
+                document.writeln("Bạn đạt loại A<br>");
+            } else if (tongDiem>=7 && tongDiem<8) {
+                document.writeln("Bạn đạt loại B<br>");
+            } else if (tongDiem>=5 && tongDiem<7) {
+                document.writeln("Bạn đạt loại C<br>");
+            } else if (tongDiem>=4 && tongDiem<5) {
+                document.writeln("Bạn đạt loại D<br>");
+            } else if (tongDiem<4) {
+                document.writeln("Bạn đạt loại F<br>");
+            } else {
+                document.writeln("Điểm không hợp lệ<br>");
+            }
+    </script>
+</body>
+</html>

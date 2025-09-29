@@ -65,9 +65,20 @@
             document.writeln(isNaN(10)+"<br>");//kiểm tra giá trị có phải là số không, trả về true/false
             document.writeln(isNaN("10a")+"<br>");//kiểm tra giá trị có phải là số không, trả về true/false
             document.writeln(isNaN("abc")+"<br>");//kiểm tra giá trị có phải là số không, trả về true/false
-            let toDay = new Date();
-            document.writeln(toDay+"<br>");//lấy năm hiện tại
 
+            let toDay = new Date('2025-12-24');
+            document.writeln(toDay.getMonth()+"<br>");
+            // getYear() lấy năm
+            // getMonth() lấy tháng (tháng bắt đầu từ 0)
+            // getDate() lấy ngày
+            // getDay() lấy thứ trong tuần (thứ bắt đầu từ 0)
+            // getHours() lấy giờ
+            // getMinutes() lấy phút
+            // getSeconds() lấy giây
+            // getMilliseconds() lấy mili giây
+            // getTime() lấy số mili giây tính từ 1/1/1970 đến thời điểm hiện tại
+
+            
 
     </script>
 </body>
