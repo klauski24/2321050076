@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm</h1>
+    <div>
+        <p>Nhập điểm A: </p>
+        <input type="number" id="diemA" >
+    </div>
+    <div>
+        <p>Nhập điểm B: </p>
+        <input type="number" id="diemB" >
+    </div>
+    <div>
+        <p>Nhập điểm C: </p>
+        <input type="number" id="diemC" >
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="ketQua" readonly>
+    </div>
+    <script>
+        // let ten=prompt("Mời bạn nhập tên: ","Nguyễn Văn A");
+        // document.writeln("Xin chào bạn "+ten+"! Chúc bạn một ngày tốt lành!");
+
+        // function tenKhongThamSo(){
+        //     let ten1=prompt("Mời bạn nhập tên: ","Nguyễn Văn A");
+        //     document.writeln("Xin chào bạn "+ten1+"! Chúc bạn một ngày tốt lành!");
+        // }
+        // tenKhongThamSo();
+
+        // function coThamSo() {
+        //     let soLan=parseInt(prompt("Mời bạn nhập số lần chào: ","3"));
+        //     if (isNaN(soLan) || soLan <= 0) {
+        //         document.writeln("Vui lòng nhập một số nguyên dương hợp lệ.<br>");
+        //         return;
+        //     }
+        //     else {
+        //         let ten2=prompt("Mời bạn nhập tên: ","Nguyễn Văn A");
+        //         for(let i=1; i<=soLan; i++){
+        //             document.writeln("Xin chào bạn "+ten2+"! Chúc bạn một ngày tốt lành! (Lần thứ "+i+")<br>");
+        //         }
+        //     }
+        // }
+        // coThamSo();
+
+        
+
+        function tinhTong(){
+            let diemA=parseFloat(document.getElementById('diemA').value);
+            let diemB=parseFloat(document.getElementById('diemB').value);
+            let diemC=parseFloat(document.getElementById('diemC').value);
+            // if (isNaN(diemA) || isNaN(diemB) || isNaN(diemC) || diemA < 0 || diemB < 0 || diemC < 0 || diemA > 10 || diemB > 10 || diemC > 10) {
+            //     alert("Vui lòng nhập đầy đủ điểm hợp lệ cho A, B và C.");
+            //     return;
+            // }
+            let canhBao = "";
+            if (!diemA || diemA<0 || diemA>10) {
+                canhBao += "Vui lòng nhập điểm A hợp lệ (0-10) ";
+            }
+            if (!diemB || diemB<0 || diemB>10) {
+                canhBao += "Vui lòng nhập điểm B hợp lệ (0-10) ";
+            }
+            if (!diemC ||diemC<0 || diemC>10) {
+                canhBao += "Vui lòng nhập điểm C hợp lệ (0-10) ";
+            }
+            if(canhBao){
+                alert(canhBao);
+            }
+
+            let diem = diemA*0.6 + diemB*0.3 + diemC*0.1;
+            if (9<=diem && diem<=10){
+                    document.getElementById('ketQua').value='A+';
+                }
+                else if (8.5<=diem && diem<9){
+                    document.getElementById('ketQua').value='A';
+                }
+                else if(8<=diem && diem<8.5){
+                    document.getElementById('ketQua').value='B+';
+                }
+                else if(7<=diem && diem<8){
+                    document.getElementById('ketQua').value='B';
+                }
+                else if(6.5<=diem && diem<7){
+                    document.getElementById('ketQua').value='C+';
+                }
+                else if(5.5<=diem && diem<6.5){
+                    document.getElementById('ketQua').value='C';
+                }
+                else if(5<=diem && diem<5.5){
+                    document.getElementById('ketQua').value='D+';
+                }
+                else if(4<=diem && diem<5){
+                    document.getElementById('ketQua').value='D';
+                }
+                else if(0<=diem && diem<4){
+                    document.getElementById('ketQua').value='F';
+                }
+        }
+    </script>
+</body>
+</html>
