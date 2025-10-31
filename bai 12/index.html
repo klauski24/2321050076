@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container{
+
+            text-align: center;
+            margin-top: 50px;
+        }
+        img{
+            width: 350px;
+            height: 350px;
+        } */
+        .container{
+            margin-top: 50px;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: aliceblue;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        button{
+            border-radius: 5px;
+            padding: 5px;
+            width: 200px;
+            background-color: rgb(230, 94, 94);
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+    
+        <div>
+            <h1>Ví dụ về thay đổi chế độ</h1>
+        </div>
+        <div class="anh">
+            <img src="sun.png">
+        </div>
+        <div class="chedo">
+            <h1>Ban ngày</h1>
+        </div>
+        <div class="doi">
+            <button style="font-size:xx-large;"onclick="doiCheDo()">Đổi chế độ</button>
+        </div>
+    </div>
+    <script>
+        let cheDo = "sang";
+        function doiCheDo() {
+            if (cheDo == 'sang') {
+                document.getElementsByTagName('body')[0].style = "background-color: black";
+                document.getElementsByTagName('img')[0].src = 'moon.png';
+                document.getElementsByTagName('h1')[0].innerHTML = 'Chế độ tối';
+                document.getElementsByTagName('h1')[0].style = 'color: white';
+                document.getElementsByTagName('h1')[1].style = 'color: white';
+                document.getElementsByTagName('h1')[1].innerHTML = 'Ban đêm';
+                cheDo = 'toi';
+            }
+            else {
+                document.getElementsByTagName('body')[0].style = "background-color: white";
+                document.getElementsByTagName('img')[0].src = 'sun.png';
+                document.getElementsByTagName('h1')[0].innerHTML = 'Chế độ sáng';
+                document.getElementsByTagName('h1')[0].style = 'color: black';
+                document.getElementsByTagName('h1')[1].style = 'color: black';
+                document.getElementsByTagName('h1')[1].innerHTML = 'Ban ngày';
+                cheDo = 'sang';
+            }
+        }
+    </script> -->
+    <div class="container">
+        <div>
+            <h1>Tính chỉ số BMI</h1>
+        </div>
+        <div>
+            Chiều cao: <input type="number" id="chieuCao" placeholder="Chiều cao (cm)">
+        </div>
+        <div>
+            Cân nặng: <input type="number" id="canNang" placeholder="Cân nặng (kg)">
+        </div>
+        <div>
+            <button onclick="tinhBMI()">Tính BMI</button>
+        </div>
+        <div>
+            Chỉ số BMI: <input type="text" id="ketQua" placeholder="Kết quả BMI" readonly>
+        </div>
+        <div>
+            <img id="hinhAnh" src="">
+        </div>
+    </div>
+    <script>
+        function tinhBMI() {
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value)/100;
+            let canNang = parseFloat(document.getElementById('canNang').value);
+            let bmi = canNang / (chieuCao * chieuCao);
+            document.getElementById('ketQua').value = bmi;
+
+            let canhBao = "";
+            if (!chieuCao) {
+                canhBao += "Vui lòng nhập chiều cao hợp lệ ";
+            }
+            if (!canNang) {
+                canhBao += "Vui lòng nhập cân nặng hợp lệ ";
+            }
+            if(canhBao){
+                alert(canhBao);
+                return;
+            }
+
+            let hinhAnh = document.getElementById('hinhAnh');
+            if (bmi < 18.5) {
+                hinhAnh.src = 'thieucan.png';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                hinhAnh.src = 'binhthuong.png';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                hinhAnh.src = 'thuacan.png';
+            } else if (bmi >= 30 && bmi < 39.9) {
+                hinhAnh.src = 'beophi.png';
+            } else {
+                hinhAnh.src = 'beophinang.png'
+            }
+        }
+    </script>
+</body>
+</html>
